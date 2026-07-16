@@ -338,14 +338,17 @@
             padding: 0 2rem;
         }
 
+        .comparison-scroll {
+            margin-top: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
         .comparison-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 2rem;
             background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
         }
 
         .comparison-table th {
@@ -363,6 +366,54 @@
 
         .comparison-table tr:hover {
             background: var(--bg-alt);
+        }
+
+        /* Mobile: freeze Feature + Koop columns, scroll the rest horizontally */
+        @media (max-width: 768px) {
+            .comparison-scroll {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .comparison-table {
+                min-width: 560px;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 1rem 0.9rem;
+                font-size: 0.9rem;
+            }
+
+            .comparison-table .col-feature {
+                position: sticky;
+                left: 0;
+                z-index: 2;
+                background: white;
+                min-width: 130px;
+            }
+
+            .comparison-table .col-koop {
+                position: sticky;
+                left: 130px;
+                z-index: 2;
+                background: white;
+                min-width: 66px;
+                box-shadow: 2px 0 6px rgba(0, 0, 0, 0.06);
+            }
+
+            /* Header cells for frozen columns keep the header gradient */
+            .comparison-table thead .col-feature,
+            .comparison-table thead .col-koop {
+                background: #f4f2fb;
+                z-index: 3;
+            }
+
+            /* Keep frozen cells opaque on row hover so scrolling content doesn't bleed through */
+            .comparison-table tbody tr:hover .col-feature,
+            .comparison-table tbody tr:hover .col-koop {
+                background: var(--bg-alt);
+            }
         }
 
         .checkmark {
@@ -589,61 +640,63 @@
             <h2 class="section-title">Designed for real friendship</h2>
         </div>
         
+        <div class="comparison-scroll">
         <table class="comparison-table">
             <thead>
                 <tr>
-                    <th>Feature</th>
-                    <th>Koop</th>
-                    <th>Marco Polo</th>
+                    <th class="col-feature">Feature</th>
+                    <th class="col-koop">Koop</th>
                     <th>Instagram Stories</th>
+                    <th>Marco Polo</th>
                     <th>Waffle Wednesday</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Organized Groups</strong></td>
-                    <td><span class="checkmark">✓</span></td>
-                    <td>Basic</td>
+                    <td class="col-feature"><strong>Organized Groups</strong></td>
+                    <td class="col-koop"><span class="checkmark">✓</span></td>
                     <td>Close Friends</td>
+                    <td>Basic</td>
                     <td>Manual</td>
                 </tr>
                 <tr>
-                    <td><strong>Multi-Media</strong></td>
-                    <td><span class="checkmark">✓</span></td>
+                    <td class="col-feature"><strong>Multi-Media</strong></td>
+                    <td class="col-koop"><span class="checkmark">✓</span></td>
+                    <td><span class="checkmark-neutral">✓</span></td>
                     <td>Video-First*</td>
                     <td><span class="checkmark-neutral">✓</span></td>
-                    <td><span class="checkmark-neutral">✓</span></td>
                 </tr>
                 <tr>
-                    <td><strong>Low Friction</strong></td>
-                    <td><span class="checkmark">✓</span></td>
-                    <td>Moderate</td>
+                    <td class="col-feature"><strong>Low Friction</strong></td>
+                    <td class="col-koop"><span class="checkmark">✓</span></td>
                     <td>High</td>
+                    <td>Moderate</td>
                     <td><span class="checkmark-neutral">✓</span></td>
                 </tr>
                 <tr>
-                    <td><strong>Mutual Accountability</strong></td>
-                    <td><span class="checkmark">✓</span></td>
+                    <td class="col-feature"><strong>Mutual Accountability</strong></td>
+                    <td class="col-koop"><span class="checkmark">✓</span></td>
                     <td>None</td>
                     <td>None</td>
                     <td>Requires Discipline</td>
                 </tr>
                 <tr>
-                    <td><strong>One Platform</strong></td>
-                    <td><span class="checkmark">✓</span></td>
+                    <td class="col-feature"><strong>One Platform</strong></td>
+                    <td class="col-koop"><span class="checkmark">✓</span></td>
                     <td><span class="checkmark-neutral">✓</span></td>
                     <td><span class="checkmark-neutral">✓</span></td>
                     <td>Scattered</td>
                 </tr>
                 <tr>
-                    <td><strong>Privacy First</strong></td>
-                    <td><span class="checkmark">✓</span></td>
-                    <td><span class="checkmark-neutral">✓</span></td>
+                    <td class="col-feature"><strong>Privacy First</strong></td>
+                    <td class="col-koop"><span class="checkmark">✓</span></td>
                     <td>hah</td>
+                    <td><span class="checkmark-neutral">✓</span></td>
                     <td><span class="checkmark-neutral">✓</span></td>
                 </tr>
             </tbody>
         </table>
+        </div>
         <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 1rem;">*Text and voice require Marco Polo Plus subscription</p>
     </section>
 
