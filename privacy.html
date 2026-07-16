@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Koop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #7F96FF;
+            --primary-dark: #6a80e8;
+            --primary-light: #f0f3ff;
+            --secondary: #6BA786;
+            --text-primary: #0a0e27;
+            --text-secondary: #5f6b7a;
+            --bg: #ffffff;
+            --bg-alt: #f8f9fb;
+            --border: #e4e8f0;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-primary);
+            background: var(--bg);
+            line-height: 1.7;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        nav a.nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a.nav-link:hover { color: var(--primary); }
+
+        /* Hero */
+        .page-hero {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem 2rem;
+            position: relative;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(127, 150, 255, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .page-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Content */
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 2rem 4rem;
+        }
+
+        .content h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .content h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+
+        .content p {
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+            font-size: 1rem;
+        }
+
+        .content ul {
+            margin: 0 0 1.25rem 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .content li { margin-bottom: 0.5rem; }
+
+        .content a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .content a:hover { text-decoration: underline; }
+
+        .intro-text {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            padding: 1.5rem;
+            background: var(--primary-light);
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        /* Data table */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        table.data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            min-width: 640px;
+        }
+
+        table.data-table th {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #eef5f1 100%);
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border-bottom: 2px solid var(--border);
+            vertical-align: top;
+        }
+
+        table.data-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        table.data-table td:first-child {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        table.data-table ol {
+            margin: 0 0 0 1.1rem;
+            padding: 0;
+        }
+
+        table.data-table li { margin-bottom: 0.4rem; }
+
+        table.data-table tr:last-child td { border-bottom: none; }
+
+        /* Footer */
+        footer {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        footer a:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 2rem; }
+            .content h2 { font-size: 1.35rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">Koop</a>
+        <a href="index.html" class="nav-link">← Back to home</a>
+    </nav>
+
+    <!-- Hero -->
+    <div class="page-hero">
+        <span class="page-label">Legal</span>
+        <h1>Privacy Policy</h1>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <p class="intro-text">Penciv Inc. ("We", "Us", "Our", "Penciv") are committed to respecting your privacy in our processing of personal data. References to Penciv products include all products and platforms set out in the Penciv developer pages on the Apple Store and Google Play Store. This privacy statement should be read carefully to understand how we obtain, process, store and disclose your personal data for the Koop app. Please refer to the Terms of Use for details about what is provided through our products and services.</p>
+
+        <h2>Personal Data</h2>
+        <p>The table below describes the personal information we collect, the processing operations and purposes for that data, and the lawful basis for processing.</p>
+
+        <div class="table-wrapper">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th style="width: 28%;">Personal Information</th>
+                        <th style="width: 44%;">Processing Operation and Purpose</th>
+                        <th style="width: 28%;">Lawful Basis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Account information (e.g. first &amp; last name, phone number, date of birth, contacts, etc.)</td>
+                        <td>
+                            <ol>
+                                <li>To create an account; allow for backup of content; secure and troubleshoot</li>
+                                <li>To provide you with an SMS Service to grant access and notify your peers not yet associated with the product</li>
+                                <li>To notify you about changes to Terms of Service and Privacy Policy</li>
+                                <li>To provide social features and interface using contact images, phone numbers, birthdays and names</li>
+                                <li>To identify friends to communicate with. Who you communicate with is derived from your contacts.</li>
+                                <li>To provide you with an SMS for marketing purposes</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <ol>
+                                <li>Necessary to provide our products and services</li>
+                                <li>Necessary to provide our products and services</li>
+                                <li>Necessary to comply with legal obligations</li>
+                                <li>Necessary to provide our products and services</li>
+                                <li>Necessary to provide our products and services</li>
+                                <li>Opt-out option will be provided</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Content you submit (e.g. images, native camera, native microphone, emotional feelings, associated activities, places, notes, mail, email, text messages, text and voice notes, links, moods or related thoughts, etc.)</td>
+                        <td>
+                            <ol>
+                                <li>To allow you to upload images for a more personalized experience</li>
+                                <li>To allow you to capture images, videos and audio for a more personalized experience</li>
+                                <li>To provide a personalized journal that contains relevant content</li>
+                                <li>To compile and present data</li>
+                                <li>To compile and present content to friends</li>
+                                <li>To provide safety</li>
+                                <li>To help, secure, and troubleshoot when necessary</li>
+                            </ol>
+                        </td>
+                        <td>With your consent to provide our products and services</td>
+                    </tr>
+                    <tr>
+                        <td>Actions you take (e.g. creating assets, discarding, deleting, sending, sharing, emailing, blocking, reporting, etc.)</td>
+                        <td>
+                            <ol>
+                                <li>To gather knowledge that improves the product</li>
+                                <li>To compile and present content to friends</li>
+                                <li>To provide safety</li>
+                                <li>To help, secure, and troubleshoot when necessary</li>
+                            </ol>
+                        </td>
+                        <td>With your consent to provide our products and services</td>
+                    </tr>
+                    <tr>
+                        <td>Demographic Data</td>
+                        <td>
+                            <ol>
+                                <li>For product development</li>
+                                <li>To help, secure, and troubleshoot when necessary</li>
+                                <li>For marketing</li>
+                            </ol>
+                        </td>
+                        <td>With your consent to provide our products and services</td>
+                    </tr>
+                    <tr>
+                        <td>Transactional Information</td>
+                        <td>To provide the product and fulfill requested financial transactions</td>
+                        <td>With your consent to provide our products and services</td>
+                    </tr>
+                    <tr>
+                        <td>Other information</td>
+                        <td>To participate in other Penciv-sponsored activities or promotions, marketing opportunities, apply for a job, request customer support, or otherwise communicate with us.</td>
+                        <td>With your consent to volunteer related, necessary information.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Information We Collect Automatically</h2>
+        <h3>Log and Usage Data</h3>
+        <ol style="margin: 0 0 1.25rem 1.5rem; color: var(--text-secondary);">
+            <li style="margin-bottom: 0.5rem;">We automatically collect and log certain information stored on your terminal device including device type, operating system specification, network settings, unique device identifier and IP address.</li>
+            <li style="margin-bottom: 0.5rem;">Usage data is collected to learn which features are popular, includes data relating to time you are active, and captures buttons and screens you interact with. This helps to inform and improve our product direction and feature development.</li>
+            <li style="margin-bottom: 0.5rem;">Our analytics providers may by default use IP addresses to determine your general non-specific location. Among other things, this allows geographic sorting and protects us against misuse and nefarious activity.</li>
+        </ol>
+
+        <h3>Information collected from cookies and similar technologies</h3>
+        <p>We may receive information from cookies, which are pieces of data your browser stores and sends back to us when making requests, and similar technologies. We use cookies and similar technologies for storing and honoring your preferences and settings, enabling you to sign in, combating fraud, analyzing how our products perform, and fulfilling other legitimate purposes.</p>
+
+        <h2>Our Retention of Personal Data</h2>
+        <p>Penciv Inc. retains personal data for as long as necessary to provide the products and fulfill the transactions you have requested, or for other legitimate purposes such as complying with our legal obligations, resolving disputes, and enforcing our agreements. Following account deletion, your personal data will be retained for no longer than 90 days, unless it is fulfilling other legal obligations. We will also anonymize some personal data so it will no longer be associated with you. In this event, we are entitled to retain and use the information freely.</p>
+
+        <h2>Reasons We Share Personal Data</h2>
+        <p>Much of the information on our service is public. By using our service, you are directing us to share information publicly and freely.</p>
+        <p>When you submit content to be shared with direct recipients (i.e. sharing user created assets), users of our services (i.e. your friends) will be able to see that content and all related metadata (images, emotional feelings, text and voice notes, etc.) attached.</p>
+        <p>Additionally, we share your personal data with your consent, or as necessary, to complete any transaction or provide any product or service you have requested or authorized. For example, we share your content with third parties (listed in Sharing with Third Parties) when you tell us to do so, such as when you share an asset (message) with a friend. When you provide payment data to make a purchase, we will share payment data with banks and other entities that process payment transactions or provide other financial services, and for fraud prevention and credit risk reduction. When you permit push notifications, the operating system of that device will process some personal data to provide push notifications. Accordingly, we may send data to an external, third-party notification provider to deliver push notifications. Your device's push notification services are governed by their own service-specific terms and privacy statements.</p>
+        <p>We do not sell your personal information. Your personal information is "sold" when it is provided with a third party for monetary or other valuable consideration for a purpose that is not a "business purpose". A "sale" does not include when we disclose your personal information at your direction, or when otherwise permitted under the law. We may share personal information in the following ways:</p>
+        <ul>
+            <li>With your consent</li>
+            <li>With our service providers listed in Sharing with Third Parties</li>
+            <li>To comply with the law</li>
+            <li>In an emergency we may share information if we believe it's necessary to prevent imminent and serious bodily harm to a person</li>
+            <li>To enforce our policies and rights</li>
+        </ul>
+
+        <h2>Sharing with Third Parties</h2>
+        <p>In order to provide you with our services, carry out our activities and to comply with legal obligations, we share your personal data with certain third parties such as:</p>
+        <ul>
+            <li>Cloud storage providers that help us securely store and back-up your data. The service providers receive your account information, photo (if provided), and journal related data.</li>
+            <li>Analytics providers who assist us in the improvement and optimization of the product. The service providers receive Device Data and Usage Data.</li>
+            <li>Service providers that help us index non geo-located location information. The service providers receive your Account information and Content You Submit.</li>
+            <li>Newsletter and Mailing providers that enable us to generate and send newsletters to you, if you have subscribed. The service providers receive your account information.</li>
+            <li>Payment providers who execute card payments for purchases made. The providers receive your payment details and account information.</li>
+            <li>Subscription infrastructure platforms who facilitate the offering of in-app subscriptions. The service providers receive your Account Information.</li>
+            <li>Law enforcement authorities, government authorities, government bodies and the courts where they request it and disclosure is lawful.</li>
+        </ul>
+
+        <h2>Age Requirement</h2>
+        <p>You must be at least 13 years of age to register an account on Koop.</p>
+
+        <h2>Your Rights and Choices</h2>
+        <p>You have choices about how to protect and limit the collection, use, and sharing of information about you when you use our services. Depending on where you live, you may also have the right to request access to or ability to port, deletion of, or correction of your personal information. You may also have the right to request opting out of advertising practices or to withdraw consent for processing where you have previously provided consent. Below we explain how to exercise each of these rights.</p>
+
+        <h3>Accessing and Changing Your Information</h3>
+        <p>You can access your information and change or correct information in the user preferences page. You can also request a copy of the personal information Penciv maintains about you by following the process described below this table.</p>
+
+        <h3>Deleting Your Account</h3>
+        <p>You may delete your account information at any time from the user preferences page. You can also submit a request to delete the personal information Penciv maintains about you by following the process described below this table. When you delete your account, content you submit that you own is removed. Please note, however, that shared moments are messages and will require all targeted recipients to consent to deletion in order to be removed. After you submit a request to delete your account, it may take up to 90 days for your request to be completed. We may retain certain information as required by law or for legitimate business purposes.</p>
+
+        <h3>Controlling Mobile Notifications</h3>
+        <p>With your consent, we send push notifications or alerts to your mobile device. You can deactivate these messages one at a time from the user preferences page, or entirely by changing the notifications settings on your mobile device.</p>
+        <p>If you have any questions or are not able to submit a request to exercise your rights using the protocols above, you may also email us at <a href="mailto:pencivdatarequests@penciv.com">pencivdatarequests@penciv.com</a>. Please be sure to include the phone number that you have verified with your Penciv account.</p>
+
+        <h2>U.S. State Data Privacy Laws Notice</h2>
+        <p>The California Consumer Privacy Act of 2018 ("CCPA"), as amended, requires us to provide California residents with some additional information. Additionally, Virginia, Colorado, Connecticut and Utah have passed similar privacy rights to their consumers. We use this notice to make disclosures required by these state laws.</p>
+        <p>You have the right to know, right to correct, right to receive and right to delete your personal information stored with Penciv. You have the right to request that we disclose certain information to you about our collection and use of your personal information over the past 12 months.</p>
+        <p>You can find more information about what we collect, the method of collection, and the business and commercial purposes for collecting that information in the "Personal Data" section. You can find more information about the actions you can take to correct and delete your personal information in the "Your Rights and Choices" section. If you'd like to receive a copy or make any specific requests of your personal information of which are your right, please reach out to <a href="mailto:pencivdatarequests@penciv.com">pencivdatarequests@penciv.com</a> from the email address that you have verified with your Penciv account. As is your right, Penciv does not discriminate against you for exercising your rights under the law.</p>
+        <p>When making any request with your information, we will verify your identity by requesting additional information from you. You may also make a rights request using an authorized agent. If you submit a rights request from an authorized agent who does not provide a valid power of attorney, we may ask the authorized agent to provide proof that you gave the agent signed permission to submit the request to exercise rights on your behalf. In the absence of a valid power of attorney, we may also require you to verify your own identity directly with us or confirm to us that you otherwise provided the authorized agent permission to submit the request.</p>
+        <p>We do not use or disclose your sensitive data for purposes other than those listed above ("Personal Data") and are permitted under applicable U.S. state data privacy laws. We do not offer an ability to limit the use of sensitive data.</p>
+        <p>You have the right to opt-out of selling or sharing your personal information. We do not sell your personal information. We do not offer an ability to opt-out of selling your personal information.</p>
+
+        <h2>Changes</h2>
+        <p>We may change this Privacy Policy to ensure compliance with data protection legislation. Our apps are also constantly evolving and new features and services may change how we process your personal data. Any substantive or material change to this Privacy Policy will be brought to your attention by sending an email to the address associated with your account, or by providing notice through our services. By continuing to use our services after Privacy Policy changes go into effect, you agree to be bound by the revised policy.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any other questions about this Privacy Policy, please contact us at:</p>
+        <p>
+            Penciv Inc.<br>
+            PO Box 24493<br>
+            Denver, CO 80224
+        </p>
+        <p>Or by email at <a href="mailto:support@penciv.com">support@penciv.com</a></p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Koop. <a href="privacy.html">Privacy Policy</a> • <a href="terms.html">Terms of Use</a> • <a href="mailto:support@penciv.com">Contact</a></p>
+    </footer>
+</body>
+</html>
